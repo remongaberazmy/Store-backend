@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mappings xmlns="http://dozer.sourceforge.net"
+  	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://dozer.sourceforge.net
+      					http://dozer.sourceforge.net/schema/beanmapping.xsd">
+      
+    <mapping wildcard="false" trim-strings="true">
+        <class-a>com.remon.store.common.dto.ShoppingDTO</class-a>
+        <class-b>com.remon.store.data.models.ShoppingEB</class-b>
+        <field>
+            <a>id</a>
+            <b>id</b>
+        </field>
+        <field>
+            <a>product</a>
+            <b>product</b>
+            <a-hint>com.remon.store.common.dto.ProductDTO</a-hint>
+            <b-hint>com.remon.store.data.models.ProductEB</b-hint>
+        </field>
+        <field>
+            <a>quantity</a>
+            <b>quantity</b>
+        </field>
+        <field>
+        	<a>shoppingOn</a>
+        	<b>audit.createdOn</b>
+        </field>
+    </mapping>
+    
+</mappings>
